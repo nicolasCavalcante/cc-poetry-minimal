@@ -1,4 +1,4 @@
-"""Script that runs after the project generation phase."""
+"""Script that runs before the project generation phase."""
 import re
 import sys
 

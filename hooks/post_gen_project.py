@@ -5,6 +5,8 @@ from pathlib import Path
 PROJECT_DIRECTORY = Path.cwd()
 
 
+if "{{cookiecutter.python_version}}" != "3.8":
+    (PROJECT_DIRECTORY / "poetry.lock").unlink()
 
 subprocess.call(["git", "init"])
 subprocess.call(["poetry", "install"])
