@@ -14,7 +14,7 @@ else:
     env_str = "{{cookiecutter.python_version}}"
     
 subprocess.call(["git", "init"])
-subprocess.call(["poetry", "env", "use", ])
+subprocess.call(["poetry", "env", "use", env_str])
 subprocess.call(["poetry", "install"])
 subprocess.call(["poetry", "run", "pre-commit", "install"])
 subprocess.call(["git", "add", "*"])
