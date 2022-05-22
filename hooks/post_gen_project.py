@@ -9,7 +9,7 @@ if "{{cookiecutter.python_version}}" != "3.8":
     (PROJECT_DIRECTORY / "poetry.lock").unlink()
 
 if platform.system() == "Windows":
-    env_str = "(py -{{cookiecutter.python_version}} -c 'import sys;print(sys.executable)')"
+    env_str = subprocess.check_output('py -{{cookiecutter.python_version}} -c "import sys;print(sys.executable)"', encoding='utf-8')
 else:
     env_str = "{{cookiecutter.python_version}}"
     
