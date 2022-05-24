@@ -1,12 +1,7 @@
 """Script that runs after the project generation phase."""
 import subprocess
-from pathlib import Path
 import platform
-PROJECT_DIRECTORY = Path.cwd()
 
-
-if "{{cookiecutter.python_version}}" != "3.8":
-    (PROJECT_DIRECTORY / "poetry.lock").unlink()
 
 if platform.system() == "Windows":
     env_str = subprocess.check_output('py -{{cookiecutter.python_version}} -c "import sys;print(sys.executable)"', encoding='utf-8').strip()
