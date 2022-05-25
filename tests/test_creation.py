@@ -6,8 +6,15 @@ from pathlib import Path
 import pytest
 from cookiecutter import main
 
-FOLDERS = [Path(".git"), Path(".vscode"), Path("project_name"), Path("tests")]
+FOLDERS = [
+    Path(".brainstorm"),
+    Path(".git"),
+    Path(".vscode"),
+    Path("project_name"),
+    Path("tests"),
+]
 FILES = [
+    ".brainstorm/.gitignore",
     ".vscode/launch.json",
     ".vscode/settings.json",
     ".flake8",
