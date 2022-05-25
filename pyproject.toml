@@ -6,16 +6,41 @@ authors = ["nicolasCavalcante <nicolasgcavalcante@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "~3.8"
+cookiecutter = "^1.7.3"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"
-black = "21.11b1"
+autoflake = "1.4"
+isort = "5.10.1"
+black = "22.3.0"
 pre-commit = "^2.16.0"
 ipython = "^7.30.1"
 pytest = "^6.2.5"
 MonkeyType = "^21.5.0"
 coverage = "^6.2"
 poethepoet = "^0.11.0"
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.poe.tasks]
+bake = { script = "poe_scripts:bake_project" }
+clean = { script = "poe_scripts:clean_project" }
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

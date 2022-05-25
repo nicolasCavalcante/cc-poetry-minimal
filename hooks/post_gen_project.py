@@ -1,13 +1,15 @@
 """Script that runs after the project generation phase."""
-import subprocess
 import platform
-
+import subprocess
 
 if platform.system() == "Windows":
-    env_str = subprocess.check_output('py -{{cookiecutter.python_version}} -c "import sys;print(sys.executable)"', encoding='utf-8').strip()
+    env_str = subprocess.check_output(
+        'py -{{cookiecutter.python_version}} -c "import sys;print(sys.executable)"',
+        encoding="utf-8",
+    ).strip()
 else:
     env_str = "{{cookiecutter.python_version}}"
-    
+
 subprocess.call(["git", "init"])
 subprocess.call(["poetry", "env", "use", env_str])
 subprocess.call(["poetry", "install"])
