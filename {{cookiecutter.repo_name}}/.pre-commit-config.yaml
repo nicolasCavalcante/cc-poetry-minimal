@@ -5,24 +5,37 @@ repos:
     rev: v1.2.0
     hooks:
       - id: forbid-crlf
+        stages: [commit]
       - id: remove-crlf
+        stages: [commit]
       - id: forbid-tabs
+        stages: [commit]
       - id: remove-tabs
+        stages: [commit]
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.2.0
     hooks:
       - id: trailing-whitespace
+        stages: [commit]
       - id: end-of-file-fixer
+        stages: [commit]
       - id: check-yaml
+        stages: [commit]
       - id: check-case-conflict
+        stages: [commit]
       - id: debug-statements
+        stages: [commit]
       - id: detect-private-key
+        stages: [commit]
       - id: check-merge-conflict
+        stages: [commit]
       - id: check-added-large-files
+        stages: [commit]
   - repo: https://github.com/myint/autoflake
     rev: v1.4
     hooks:
       - id: autoflake
+        stages: [commit]
         args:
           - --in-place
           - --remove-duplicate-keys
@@ -33,10 +46,12 @@ repos:
     rev: 5.10.1
     hooks:
       - id: isort
+        stages: [commit]
   - repo: https://github.com/psf/black
     rev: 22.3.0
     hooks:
       - id: black
+        stages: [commit]
   - repo: local
     hooks:
       - id: jupyter-nb-clear-output
@@ -50,6 +65,7 @@ repos:
     hooks:
       - id: nbqa
         name: nbqa-autoflake
+        stages: [commit]
         args:
           - autoflake
           - --in-place
@@ -60,10 +76,12 @@ repos:
         additional_dependencies:
           - autoflake
       - id: nbqa-isort
+        stages: [commit]
         args:
           - --profile=black
           - --line-length=120
       - id: nbqa-black
+        stages: [commit]
         args:
           - --line-length=120
   - repo: local
