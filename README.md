@@ -1,10 +1,10 @@
 # Features
 - [Poetry] for dependency management, build and release
 - [Pre-commit hooks] for formmating/linting before commits
-- Formatting ([black], [isort], [autoflake])
+- Formatting ([black], [isort], [autoflake], [flake8-docstrings])
 - Testing with [Pytest]
 - Code coverage report with [coveragepy]
-- [poethepoet] for task running
+- [poethepoet] and [Fire] for task running
 
 # Usage
 ```bash
@@ -13,18 +13,18 @@
 
 # Good Aditions
 
-- [mkdocs] and [mkdocstrings] for documentation
-- [Python Fire] for command line interface 
+- [mkdocs], [mkdocstrings] for documentation
 
 
 [poetry]: https://python-poetry.org/
 [poethepoet]: https://github.com/nat-n/poethepoet
-[mkdocs]: https://www.mkdocs.org
 [pytest]: https://pytest.org
 [coveragepy]: https://coverage.readthedocs.io/en/6.4/
 [black]: https://github.com/psf/black
 [isort]: https://github.com/PyCQA/isort
 [autoflake]: https://github.com/PyCQA/autoflake
+[mkdocs]: https://www.mkdocs.org
 [mkdocstrings]: https://mkdocstrings.github.io/
-[Python Fire]: https://github.com/google/python-fire
+[flake8-docstrings]: https://pypi.org/project/flake8-docstrings/
+[Fire]: https://github.com/google/python-fire
 [Pre-commit hooks]: https://pre-commit.com/

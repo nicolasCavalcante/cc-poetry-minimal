@@ -1,4 +1,4 @@
-"""Test the creation of the project."""
+"""Scripts used on poe the poet module."""
 import shutil
 import stat
 from pathlib import Path

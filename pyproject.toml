@@ -19,6 +19,7 @@ pytest = "^6.2.5"
 MonkeyType = "^21.5.0"
 coverage = "^6.2"
 poethepoet = "^0.11.0"
+flake8-docstrings = "^1.6.0"
 
 [tool.black]
 line-length = 88
@@ -41,6 +42,7 @@ exclude = '''
 [tool.poe.tasks]
 bake = { script = "poe_scripts:bake_project" }
 clean = { script = "poe_scripts:clean_project" }
+test = "pytest tests/"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

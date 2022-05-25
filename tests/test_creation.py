@@ -7,7 +7,17 @@ import pytest
 from cookiecutter import main
 
 FOLDERS = [Path(".git"), Path(".vscode"), Path("project_name"), Path("tests")]
-FILES = [".gitignore", ".pre-commit-config.yaml", "pyproject.toml", "README.md"]
+FILES = [
+    ".vscode/launch.json",
+    ".vscode/settings.json",
+    ".flake8",
+    ".gitignore",
+    ".pre-commit-config.yaml",
+    "poetry.lock",
+    "README.md",
+    "poe_scripts.py",
+    "pyproject.toml",
+]
 
 CC_ROOT = Path(__file__).parents[1].resolve()
 
