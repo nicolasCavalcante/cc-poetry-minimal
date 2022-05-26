@@ -41,6 +41,9 @@ exclude = '''
 )/
 '''
 
+[tool.poe.executor]
+type = "virtualenv"
+
 [tool.poe.tasks]
 _isort = "isort ."
 _black = "black ."
