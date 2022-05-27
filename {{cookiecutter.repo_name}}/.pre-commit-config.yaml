@@ -31,17 +31,6 @@ repos:
         stages: [commit]
       - id: check-added-large-files
         stages: [commit]
-  - repo: https://github.com/myint/autoflake
-    rev: v1.4
-    hooks:
-      - id: autoflake
-        stages: [commit]
-        args:
-          - --in-place
-          - --remove-duplicate-keys
-          - --remove-unused-variables
-          - --remove-all-unused-imports
-          - --expand-star-imports
   - repo: https://github.com/PyCQA/isort
     rev: 5.10.1
     hooks:

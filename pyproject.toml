@@ -39,6 +39,21 @@ exclude = '''
 )/
 '''
 
+[tool.isort]
+profile = "black"
+skip = [
+  ".eggs",
+  ".git",
+  ".hg",
+  ".mypy_cache",
+  ".tox",
+  ".venv",
+  "_build",
+  "buck-out",
+  "build",
+  "dist",
+]
+
 [tool.poe.tasks]
 bake = { script = "poe_scripts:bake_project" }
 clean = { script = "poe_scripts:clean_project" }

@@ -1,7 +1,7 @@
 # Features
 - [Poetry] for dependency management, build and release
 - [Pre-commit hooks] for formmating/linting before commits
-- Formatting ([black], [isort], [autoflake], [flake8-docstrings])
+- Formatting ([black], [isort], [flake8-docstrings])
 - Testing with [Pytest]
 - Code coverage report with [coveragepy]
 - [poethepoet] and [Fire] for task running
@@ -22,7 +22,6 @@
 [coveragepy]: https://coverage.readthedocs.io/en/6.4/
 [black]: https://github.com/psf/black
 [isort]: https://github.com/PyCQA/isort
-[autoflake]: https://github.com/PyCQA/autoflake
 [mkdocs]: https://www.mkdocs.org
 [mkdocstrings]: https://mkdocstrings.github.io/
 [flake8-docstrings]: https://pypi.org/project/flake8-docstrings/
