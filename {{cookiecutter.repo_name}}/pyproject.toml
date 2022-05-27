@@ -56,10 +56,6 @@ skip = [
   "buck-out",
   "build",
   "dist",
-  "hm3d/meshroom/aliceVision",
-  "hm3d/meshroom/qtPlugins",
-  "hm3d/meshroom/bin",
-  "hm3d/meshroom/meshroom/ui",
 ]
 
 [tool.poe.tasks]
