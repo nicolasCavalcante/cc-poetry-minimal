@@ -2,7 +2,7 @@
 - [Poetry] for dependency management, build and release
 - [Pre-commit hooks] for formmating/linting before commits
 - Formatting ([black], [isort], [flake8-docstrings])
-- Testing with [Pytest]
+- Testing with [Pytest] and [ipdb]
 - Code coverage report with [coveragepy]
 - [poethepoet] and [Fire] for task running
 
@@ -19,6 +19,7 @@
 [poetry]: https://python-poetry.org/
 [poethepoet]: https://github.com/nat-n/poethepoet
 [pytest]: https://pytest.org
+[ipdb]: https://github.com/gotcha/ipdb
 [coveragepy]: https://coverage.readthedocs.io/en/6.4/
 [black]: https://github.com/psf/black
 [isort]: https://github.com/PyCQA/isort

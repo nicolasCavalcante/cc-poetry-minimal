@@ -21,6 +21,7 @@ poethepoet = "^0.11.0"
 fire = "^0.4.0"
 typeguard = "^2.13.3"
 flake8-docstrings = "^1.6.0"
+ipdb = "^0.13.9"
 
 [tool.black]
 line-length = 88
@@ -63,6 +64,9 @@ _isort = "isort ."
 _black = "black ."
 beautify = { sequence = ["_isort", "_black"], help = "isort + black" }
 coverage = { cmd = "python -m fire poe_scripts coverage", help = "check = [ --help, --skip_test, --in_browser]" }
+
+[tool.pytest.ini_options]
+addopts = "--pdbcls=IPython.terminal.debugger:TerminalPdb"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
